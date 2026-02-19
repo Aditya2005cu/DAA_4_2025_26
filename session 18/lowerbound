@@ -1,0 +1,30 @@
+#include<iostream>
+#include<vector>
+#include<limits>
+
+using namespace std;
+
+int lowerbound(vector<int> &nums,int target){
+    int len = nums.size();
+    int low = 0;
+        int high = len - 1;
+        int ans = len;
+        while(low <= high){
+            int mid = (high - low / 2) + low;
+            
+            if(nums[mid] >= target){
+                ans = mid;
+                high = mid - 1;
+            }
+            
+            else {
+                low = mid + 1;
+            }
+        }
+        return ans;
+}
+
+int main(){
+    vector<int> arr = {1,1,2,2,4,5,6};
+    cout<<lowerbound(arr,3)<<endl;
+}
