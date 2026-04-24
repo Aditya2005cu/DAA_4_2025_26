@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sorting Algorithm Visualizer</h1>
+        <div class="controls">
+            <div class="control-group">
+                <label for="size_slider">Array Size:</label>
+                <input type="range" id="size_slider" min="10" max="100" value="50">
+            </div>
+            <div class="control-group">
+                <label for="speed_slider">Speed:</label>
+                <input type="range" id="speed_slider" min="1" max="100" value="50">
+            </div>
+            <div class="control-group">
+                <select id="algo_select">
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="selection">Selection Sort</option>
+                    <option value="insertion">Insertion Sort</option>
+                    <option value="merge">Merge Sort</option>
+                    <option value="quick">Quick Sort</option>
+                    <option value="heap">Heap Sort</option>
+                    <option value="counting">Counting Sort</option>
+                    <option value="radix">Radix Sort</option>
+                </select>
+            </div>
+            <button id="generate_btn">Generate New Array</button>
+            <button id="sort_btn" class="primary-btn">Start Sorting</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="bars_container"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

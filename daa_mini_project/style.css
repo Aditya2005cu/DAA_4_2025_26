@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 15px;
+    color: #bb86fc;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+select, button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+select:focus, button:focus { outline: none; }
+
+button:hover { background-color: #555; }
+
+.primary-btn {
+    background-color: #03dac6;
+    color: #000;
+    font-weight: bold;
+}
+
+.primary-btn:hover { background-color: #018786; color: white; }
+
+button:disabled, select:disabled, input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+#bars_container {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    width: 90%;
+    max-width: 1200px;
+    gap: 2px;
+}
+
+.bar {
+    background-color: #03dac6;
+    flex: 1;
+    border-radius: 3px 3px 0 0;
+    transition: background-color 0.2s ease;
+}
